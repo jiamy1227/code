@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+
+    function testAwait(){
+      return new Promise(function(resolve){
+        setTimeout(function(){
+          console.log('setTimeout..');
+          resolve();
+        },3000);
+      })
+    }
+    async function testAsync(){
+      await testAwait();
+      console.log('testAwait...');
+    }
+    testAsync();
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "id": "1920036",
+  "name": "masterj",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "791860",
+      "name": "手机",
+      "font_class": "ai-phone",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1319970",
+      "name": "人",
+      "font_class": "ren",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5334168",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "351772",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "2053182",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "2170603",
+      "name": "外卖-2",
+      "font_class": "waimai-",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "3315400",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}
