@@ -11,6 +11,10 @@ export default {
   name: 'App',
   components: {
     FooterGuide
+  },
+  created () {
+// 异步获取 address
+    this.$store.dispatch('getAddress')
   }
 }
 </script>

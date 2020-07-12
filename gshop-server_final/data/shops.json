@@ -54,7 +54,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16018a5c08533.jpeg",
+    "image_path": "../../../static/images/shop/1.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -136,7 +136,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "161e60bf5b85700.png",
+    "image_path": "../../../static/images/shop/2.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -227,7 +227,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "161690214004367.png",
+    "image_path": "../../../static/images/shop/3.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -318,7 +318,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16131b317533592.png",
+    "image_path": "../../../static/images/shop/4.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
@@ -409,7 +409,7 @@
     },
     "is_new": true,
     "is_premium": true,
-    "image_path": "16164d139ce4307.png",
+    "image_path": "../../../static/images/shop/5.jpg",
     "identification": {
       "registered_number": "",
       "registered_address": "",
