@@ -2,7 +2,7 @@
 vuex 的 actions 模块
 */
 import {reqAddress, reqCategorys, reqShops} from '../api'
-import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS} from './mutation-types'
+import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS, RESET_LOGIN_USER, SAVE_LOGIN_USER} from './mutation-types'
 export default {
 // 异步获取地址
   async getAddress({commit, state}) {
@@ -20,5 +20,11 @@ export default {
     const {latitude, longitude} = state
     const result = await reqShops({latitude, longitude})
     commit(RECEIVE_SHOPS, {shops: result.data})
+  },
+  saveLoginUser({commit},user){
+    commit(SAVE_LOGIN_USER,{user})
+  },
+  resetLoginUser({commit}){
+    commit(RESET_LOGIN_USER)
   }
 }
