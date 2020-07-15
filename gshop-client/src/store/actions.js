@@ -1,8 +1,8 @@
 /*
 vuex 的 actions 模块
 */
-import {reqAddress, reqCategorys, reqShops} from '../api'
-import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS, RESET_LOGIN_USER, SAVE_LOGIN_USER} from './mutation-types'
+import {reqAddress, reqCategorys, reqShops,reqUser,reqLogout} from '../api'
+import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS, RESET_LOGIN_USER, SAVE_LOGIN_USER,GET_USER_INFO} from './mutation-types'
 export default {
 // 异步获取地址
   async getAddress({commit, state}) {
@@ -25,6 +25,14 @@ export default {
     commit(SAVE_LOGIN_USER,{user})
   },
   resetLoginUser({commit}){
+    reqLogout();
     commit(RESET_LOGIN_USER)
+  },
+  async getUserInfo({commit}){
+    const result = await reqUser();
+    if(result.code===0){
+      const user = result.data
+    commit(GET_USER_INFO,{user})
+    }
   }
 }

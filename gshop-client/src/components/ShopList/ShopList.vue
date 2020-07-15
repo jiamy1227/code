@@ -6,7 +6,7 @@
     </div>
     <div class="shop_container">
       <ul class="shop_list">
-        <li class="shop_li border-1px" v-for="(shop,index) in shops">
+        <router-link class="shop_li border-1px" tag="li" v-for="(shop,index) in shops" to="/shop" :key="index">
           <a>
             <div class="shop_left">
               <img class="shop_img" :src="shop.image_path">
@@ -43,7 +43,7 @@
               </section>
             </div>
           </a>
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>

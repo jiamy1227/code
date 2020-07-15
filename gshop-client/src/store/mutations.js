@@ -6,7 +6,8 @@ import {
   RECEIVE_CATEGORYS,
   RECEIVE_SHOPS,
   SAVE_LOGIN_USER,
-  RESET_LOGIN_USER
+  RESET_LOGIN_USER,
+  GET_USER_INFO
 } from './mutation-types'
 export default {
   [RECEIVE_ADDRESS](state, {address}) {
@@ -24,4 +25,7 @@ export default {
   [RESET_LOGIN_USER](state) {
     state.user = {}
   },
+  [GET_USER_INFO](state,{user}) {
+    state.user = user
+  }
 }

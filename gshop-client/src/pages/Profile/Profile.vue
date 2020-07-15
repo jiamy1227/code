@@ -7,7 +7,7 @@
           <i class="iconfont icon-ren"></i>
         </div>
         <div class="user-info">
-          <p class="user-info-top">{{user?user.name:'登录/注册'}}</p>
+          <p class="user-info-top">{{user._id||'登录/注册'}}</p>
           <p>
                 <span class="user-icon">
                   <i class="iconfont icon-ai-phone"></i>
@@ -88,12 +88,17 @@
         </div>
       </a>
     </section>
+    <section  class="profile_my_order border-1px" >
+      <mt-button type="danger" style="width: 100%" v-if="user._id" @click="logout">退出登录</mt-button>
+    </section>
   </section>
 </template>
 
 <script>
     import HeaderTop from "../../components/HeaderTop/HeaderTop";
     import {mapState} from "vuex"
+    import {MessageBox} from 'mint-ui'
+
     export default {
       name: "Profile.vue",
       computed:{
@@ -101,6 +106,14 @@
       },
       components:{
         HeaderTop:HeaderTop,
+      },
+      methods:{
+        logout(){
+          MessageBox.confirm('确定退出？').then(action=>{
+            this.$store.dispatch("resetLoginUser");
+          },action=>{})
+        }
+
       }
     }
 </script>

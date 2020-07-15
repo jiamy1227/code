@@ -7,6 +7,7 @@
 
 <script>
 import FooterGuide from "./components/FooterGuide/FooterGuide";
+import {mapActions} from "vuex"
 export default {
   name: 'App',
   components: {
@@ -15,6 +16,13 @@ export default {
   created () {
 // 异步获取 address
     this.$store.dispatch('getAddress')
+    this.$store.dispatch('getUserInfo')
+  },
+  mounted(){
+    this.getUserInfo();
+  },
+  methods:{
+    ...mapActions(['getUserInfo'])
   }
 }
 </script>
