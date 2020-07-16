@@ -6,9 +6,11 @@
 
 <script>
     export default {
-        name: "ShopInfo",
+      name: "ShopInfo",
       methods:{
-
+      },
+      mounted() {
+        this.$store.dispatch("getShopInfo");
       }
     }
 </script>

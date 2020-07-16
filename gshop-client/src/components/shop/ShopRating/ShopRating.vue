@@ -6,8 +6,11 @@
 
 <script>
     export default {
-        name: "ShopRating",
+      name: "ShopRating",
       methods:{
+      },
+      mounted() {
+        this.$store.dispatch("getRatingInfo");
       }
     }
 </script>

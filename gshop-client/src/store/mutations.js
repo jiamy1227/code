@@ -7,7 +7,10 @@ import {
   RECEIVE_SHOPS,
   SAVE_LOGIN_USER,
   RESET_LOGIN_USER,
-  GET_USER_INFO
+  GET_USER_INFO,
+  GET_SHOP_INFO,
+  GET_RATING_INFO,
+  GET_GOODS_INFO
 } from './mutation-types'
 export default {
   [RECEIVE_ADDRESS](state, {address}) {
@@ -27,5 +30,14 @@ export default {
   },
   [GET_USER_INFO](state,{user}) {
     state.user = user
+  },
+  [GET_SHOP_INFO](state,{info}) {
+    state.info = info
+  },
+  [GET_RATING_INFO](state,{rating}) {
+    state.rating = rating
+  },
+  [GET_GOODS_INFO](state,{goods}) {
+    state.goods = goods
   }
 }

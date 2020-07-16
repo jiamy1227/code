@@ -7,3 +7,6 @@ export const RECEIVE_SHOPS = 'receive_shops' // 接收商家数组
 export const SAVE_LOGIN_USER = 'save_login_user'
 export const RESET_LOGIN_USER = 'reset_login_user'
 export const GET_USER_INFO = 'get_user_info'
+export const GET_SHOP_INFO = 'get_shop_info'
+export const GET_RATING_INFO = 'get_rating_info'
+export const GET_GOODS_INFO = 'get_goods_info'

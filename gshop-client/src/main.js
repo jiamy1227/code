@@ -7,7 +7,7 @@ import store from './store'
 import {Button} from 'mint-ui'
 
 Vue.config.productionTip = false
-
+require('./mock/mockServer')
 //注册全局组件
 Vue.component(Button.name, Button)
 /* eslint-disable no-new */

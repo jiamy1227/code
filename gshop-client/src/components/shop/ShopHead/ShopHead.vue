@@ -17,11 +17,11 @@
 
 <script>
     export default {
-        name: "ShopHead",
+      name: "ShopHead",
       methods:{
-        goTo(path){
-          this.$router.replace(path)
-        }
+      },
+      mounted() {
+        this.$store.dispatch("");
       }
     }
 </script>

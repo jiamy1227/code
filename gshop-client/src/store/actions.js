@@ -1,8 +1,16 @@
 /*
 vuex 的 actions 模块
 */
-import {reqAddress, reqCategorys, reqShops,reqUser,reqLogout} from '../api'
-import {RECEIVE_ADDRESS, RECEIVE_CATEGORYS, RECEIVE_SHOPS, RESET_LOGIN_USER, SAVE_LOGIN_USER,GET_USER_INFO} from './mutation-types'
+import {reqAddress, reqCategorys, reqShops, reqUser, reqLogout, reqShopInfo, reqShopRatings, reqShopGoods} from '../api'
+import {
+  RECEIVE_ADDRESS,
+  RECEIVE_CATEGORYS,
+  RECEIVE_SHOPS,
+  RESET_LOGIN_USER,
+  SAVE_LOGIN_USER,
+  GET_USER_INFO,
+  GET_SHOP_INFO, GET_RATING_INFO, GET_GOODS_INFO
+} from './mutation-types'
 export default {
 // 异步获取地址
   async getAddress({commit, state}) {
@@ -33,6 +41,27 @@ export default {
     if(result.code===0){
       const user = result.data
     commit(GET_USER_INFO,{user})
+    }
+  },
+  async getShopInfo({commit}){
+    const result = await reqShopInfo();
+    if(result.code===0){
+      const shop = result.data
+      commit(GET_SHOP_INFO,{shop})
+    }
+  },
+  async getRatingInfo({commit}){
+    const result = await reqShopRatings();
+    if(result.code===0){
+      const rating = result.data
+      commit(GET_RATING_INFO,{rating})
+    }
+  },
+  async getGoodsInfo({commit}){
+    const result = await reqShopGoods();
+    if(result.code===0){
+      const goods = result.data
+      commit(GET_GOODS_INFO,{goods})
     }
   }
 }
