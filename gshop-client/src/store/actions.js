@@ -46,8 +46,8 @@ export default {
   async getShopInfo({commit}){
     const result = await reqShopInfo();
     if(result.code===0){
-      const shop = result.data
-      commit(GET_SHOP_INFO,{shop})
+      const info = result.data
+      commit(GET_SHOP_INFO,{info})
     }
   },
   async getRatingInfo({commit}){
