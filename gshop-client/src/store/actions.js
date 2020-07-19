@@ -57,11 +57,12 @@ export default {
       commit(GET_RATING_INFO,{rating})
     }
   },
-  async getGoodsInfo({commit}){
+  async getGoodsInfo({commit},callback){
     const result = await reqShopGoods();
     if(result.code===0){
-      const goods = result.data
-      commit(GET_GOODS_INFO,{goods})
+      const goods = result.data;
+      commit(GET_GOODS_INFO,{goods});
+      callback && callback();
     }
   }
 }
