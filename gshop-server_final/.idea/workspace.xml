@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971f2a9d-0cd3-4e28-8bb6-6d55c8e97e34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopGoods/CartControl.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gshop-client/src/css-test/css-stylust.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gshop-client/src/css-test/csstest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gshop-client/src/css-test/csstest2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gshop-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gshop-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopGoods/ShopGoods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopGoods/ShopGoods.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gshop-client/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/src/store/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gshop-client/src/components/Split/Split.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopInfo/ShopInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopInfo/ShopInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopRating/ShopRating.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/src/components/shop/ShopRating/ShopRating.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gshop-client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gshop-client/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="126" column="2" lean-forward="true" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
+            <state relative-caret-position="25">
+              <caret line="126" column="2" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -123,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,7 +151,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,15 +190,15 @@
       <workItem from="1594897796776" duration="1870000" />
       <workItem from="1595063013205" duration="1775000" />
       <workItem from="1595126286901" duration="2550000" />
+      <workItem from="1595167294613" duration="845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25847000" />
+    <option name="totallyTimeSpent" value="26692000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23551106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -288,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="126" column="2" lean-forward="true" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
+        <state relative-caret-position="25">
+          <caret line="126" column="2" selection-start-line="126" selection-start-column="2" selection-end-line="126" selection-end-column="2" />
         </state>
       </provider>
     </entry>
