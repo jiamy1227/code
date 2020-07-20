@@ -13,10 +13,10 @@
       </div>
       <div class="foods-wrapper" ref="foodsWrapper">
         <ul ref="foodsWrapper">
-          <li class="food-list-hook" v-for="(good,index) in goods" :key="index">
+          <li class="food-list-hook" v-for="(good,index) in goods" :key="index" >
             <h1 class="title">{{good.name}}</h1>
             <ul>
-              <li class="food-item bottom-border-1px" v-for="(food,index) in good.foods" :key="index">
+              <li class="food-item bottom-border-1px" v-for="(food,index) in good.foods" :key="index" @click="showFood(food)">
                 <div class="icon">
                   <img width="57" height="57"
                        :src="food.icon">
@@ -30,9 +30,10 @@
                   <div class="price">
                     <span class="now">￥{{food.price}}</span>
                   </div>
-                  <CartControl class="cartcontrol-wrapper"/>
+                  <CartControl class="cartcontrol-wrapper" :food="food"/>
 
                 </div>
+                <Food :food="food" ref="food"></Food>
               </li>
             </ul>
           </li>
@@ -46,18 +47,25 @@
   import  {mapState} from "vuex"
   import BScorll from "better-scroll"
   import CartControl from "./CartControl"
+  import Food from "./Food"
   export default {
     name: "ShopGoods",
     components:{
-      CartControl
+      CartControl,
+      Food
     },
     data(){
       return {
         scrollY:0,
-        tops:[]
+        tops:[],
+        food: {}
       }
     },
     methods: {
+      showFood(food) {
+        this.food= food
+        this.$refs.food.toggleShow()
+      },
       _initScroll(){
         new BScorll('.menu-wrapper');
         this.foodsScroll = new BScorll('.foods-wrapper',{

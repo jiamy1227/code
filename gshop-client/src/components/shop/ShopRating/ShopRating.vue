@@ -76,6 +76,7 @@
 <script>
   import {mapState} from "vuex"
   import Star from "../../star/Star"
+  import BScorll from 'better-scroll'
     export default {
       name: "ShopRating",
       components:{
@@ -93,9 +94,12 @@
 
       },
       mounted() {
-        this.$store.dispatch("getRatingInfo");
+        this.$store.dispatch("getRatingInfo",()=>{
+          this.showRating = this.$store.state.rating
+          new BScorll('.ratings-content');
+        });
         //this.$store.dispatch("getShopInfo");
-        this.showRating = this.$store.state.rating
+
       }
     }
 </script>

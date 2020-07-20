@@ -9,7 +9,7 @@ import {
   RESET_LOGIN_USER,
   SAVE_LOGIN_USER,
   GET_USER_INFO,
-  GET_SHOP_INFO, GET_RATING_INFO, GET_GOODS_INFO
+  GET_SHOP_INFO, GET_RATING_INFO, GET_GOODS_INFO,INCREMENT_FOOD_COUNT,DECREMENT_FOOD_COUNT
 } from './mutation-types'
 export default {
 // 异步获取地址
@@ -43,18 +43,20 @@ export default {
     commit(GET_USER_INFO,{user})
     }
   },
-  async getShopInfo({commit}){
+  async getShopInfo({commit},callback){
     const result = await reqShopInfo();
     if(result.code===0){
       const info = result.data
       commit(GET_SHOP_INFO,{info})
+      callback && callback();
     }
   },
-  async getRatingInfo({commit}){
+  async getRatingInfo({commit},callback){
     const result = await reqShopRatings();
     if(result.code===0){
       const rating = result.data
       commit(GET_RATING_INFO,{rating})
+      callback && callback();
     }
   },
   async getGoodsInfo({commit},callback){
@@ -63,6 +65,13 @@ export default {
       const goods = result.data;
       commit(GET_GOODS_INFO,{goods});
       callback && callback();
+    }
+  },
+  updateFoodCount({commit},{isAdd,food}){
+    if(isAdd){
+      commit(INCREMENT_FOOD_COUNT,{food})
+    } else {
+      commit(DECREMENT_FOOD_COUNT,{food})
     }
   }
 }
