@@ -33,13 +33,15 @@
                   <CartControl class="cartcontrol-wrapper" :food="food"/>
 
                 </div>
-                <Food :food="food" ref="food"></Food>
+
               </li>
             </ul>
           </li>
         </ul>
       </div>
+      <ShopCart></ShopCart>
     </div>
+    <Food :food="food" ref="food"></Food>
   </div>
 </template>
 
@@ -48,11 +50,13 @@
   import BScorll from "better-scroll"
   import CartControl from "./CartControl"
   import Food from "./Food"
+  import ShopCart from "./ShopCart"
   export default {
     name: "ShopGoods",
     components:{
       CartControl,
-      Food
+      Food,
+      ShopCart
     },
     data(){
       return {
@@ -64,6 +68,7 @@
     methods: {
       showFood(food) {
         this.food= food
+        //@jiamy 父组件调用子组件的方法：先通过ref得到子组件的对象，然后直接调用
         this.$refs.food.toggleShow()
       },
       _initScroll(){

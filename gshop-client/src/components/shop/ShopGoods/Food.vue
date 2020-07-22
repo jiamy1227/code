@@ -1,12 +1,12 @@
 <template>
-  <div class="food">
+  <div class="food" v-if="isShow">
     <div class="food-content">
       <div class="image-header">
         <img
           :src="food.image">
         <p class="foodpanel-desc">{{food.info}}</p>
         <div class="back">
-          <i class="iconfont icon-arrow_left">←</i>
+          <i class="iconfont icon-arrow_left" @click="toggleShow">←</i>
         </div>
       </div>
       <div class="content">
@@ -22,7 +22,7 @@
         <CartControl class="cartcontrol-wrapper" :food="food"/>
       </div>
     </div>
-    <div class="food-cover"></div>
+    <div class="food-cover" @click="toggleShow">关闭</div>
   </div>
 </template>
 
@@ -33,8 +33,18 @@
       props:{
         food:Object
       },
+      data(){
+        return {
+          isShow:false
+        }
+      },
       components:{
         CartControl
+      },
+      methods:{
+        toggleShow(){
+          this.isShow =!this.isShow
+        }
       }
     }
 </script>
@@ -143,6 +153,8 @@
             opacity: 1
           &.fade-enter, &.fade-leave
             opacity: 0
+
+
     .food-cover
       position absolute
       top 0

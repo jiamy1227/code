@@ -1,8 +1,9 @@
 <template>
   <div class="cartcontrol">
-    <div class="iconfont icon-remove_circle_outline" v-if="food.count" @click="updateFoodCount(false)">-</div>
+    <!--@jiamy @click.stop 组织事件冒泡，不会把事件在向上父层DIV触发-->
+    <div class="iconfont icon-remove_circle_outline" v-if="food.count" @click.stop="updateFoodCount(false)">-</div>
     <div class="cart-count" v-if="food.count">{{food.count}}</div>
-    <div class="iconfont icon-add_circle" @click="updateFoodCount(true)">+</div>
+    <div class="iconfont icon-add_circle" @click.stop="updateFoodCount(true)">+</div>
   </div>
 </template>
 
