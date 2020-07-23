@@ -41,13 +41,17 @@
 <script>
   import CartControl from "./CartControl"
   import {mapState,mapGetters} from "vuex"
+  import BScorll from "better-scroll"
     export default {
         name: "ShopCart",
       components:{
           CartControl
       },
+
       data(){
-        isShow:false
+        return {
+          isShow:false
+        }
       },
       computed:{
         ...mapGetters(['totalCount','totalPrice']),
